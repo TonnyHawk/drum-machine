@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #E1D89F;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  #root {
+    align-items: center;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.machine {
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0px 13px 40px rgba(0, 0, 0, 0.25);
+  border: 1px solid black;
+  height: max-content;
+}
+.machine__head {
+  background-color: #70877F;
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid black;
+}
+.machine__head-screen {
+  background-color: #464646;
+  padding: 20px;
+  color: white;
+  min-height: 74.4px;
+}
+.machine__screen-text {
+  font-size: 30px;
+}
+.machine__body {
+  padding: 10px;
+  background-color: #C1C1C1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(110px, 1fr));
+  grid-template-rows: repeat(3, minmax(110px, 1fr));
+  grid-gap: 10px;
+  max-height: 572px;
+  min-height: fit-content;
+}
+.machine__pad {
+  background-color: #959595;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 100%;
+  cursor: pointer;
+}
+.machine__pad:active, .active{
+  background-color: #904E55;
+  color: white;
+  border: 2px inset rgb(118, 118, 118);
+}
+.machine__pad:focus{
+  outline: none;
+}
+.machine__pad-text {
+  text-transform: uppercase;
+  font-size: 38px;
+  position: absolute;
+  top: calc(50% - 19px);
+  display: none;
+  font-weight: 700;
+}
+@media (min-width: 992px) {
+  .machine__pad-text {
+    display: inline;
+  }
+}
+.machine__pad-audio {
+  display: none;
+}
