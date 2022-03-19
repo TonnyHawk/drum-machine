@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+.active, .machine__pad:active {
+  background-color: #904E55 !important;
+  color: white !important;
+  border: 2px inset #767676 !important;
+}
+
 #root {
   position: fixed;
   top: 0;
@@ -32,11 +38,10 @@ p {
 
 .machine {
   width: 100%;
-  max-width: 520px;
+  max-width: 560px;
   box-shadow: 0px 13px 40px rgba(0, 0, 0, 0.25);
   border: 1px solid black;
   height: max-content;
-  max-width: 100%;
 }
 .machine__head {
   background-color: #70877F;
@@ -74,12 +79,7 @@ p {
   padding-top: 100%;
   cursor: pointer;
 }
-.machine__pad:active, .active{
-  background-color: #904E55;
-  color: white;
-  border: 2px inset rgb(118, 118, 118);
-}
-.machine__pad:focus{
+.machine__pad:focus {
   outline: none;
 }
 .machine__pad-text {
